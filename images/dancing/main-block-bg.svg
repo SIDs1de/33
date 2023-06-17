@@ -1,25 +1,7 @@
-<svg width="503" height="435" viewBox="0 0 503 435" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g filter="url(#filter0_dd_1_372)">
-<path d="M4.49996 426.197L333.036 422.021C367.335 421.767 397.132 398.477 405.609 365.248L498.69 0.341635L170.153 4.51849C135.855 4.77226 106.057 28.0617 97.5812 61.2912L4.49996 426.197Z" fill="url(#paint0_linear_1_372)"/>
-</g>
+<svg width="495" height="427" viewBox="0 0 495 427" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.499964 426.197L329.036 422.021C363.335 421.767 393.132 398.477 401.609 365.248L494.69 0.341635L166.153 4.51849C131.855 4.77226 102.057 28.0617 93.5812 61.2912L0.499964 426.197Z" fill="url(#paint0_linear_1_372)"/>
 <defs>
-<filter id="filter0_dd_1_372" x="0.5" y="0.341614" width="502.19" height="433.856" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-<feFlood flood-opacity="0" result="BackgroundImageFix"/>
-<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-<feOffset dy="4"/>
-<feGaussianBlur stdDeviation="2"/>
-<feComposite in2="hardAlpha" operator="out"/>
-<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
-<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1_372"/>
-<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-<feOffset dy="4"/>
-<feGaussianBlur stdDeviation="2"/>
-<feComposite in2="hardAlpha" operator="out"/>
-<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
-<feBlend mode="normal" in2="effect1_dropShadow_1_372" result="effect2_dropShadow_1_372"/>
-<feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_1_372" result="shape"/>
-</filter>
-<linearGradient id="paint0_linear_1_372" x1="396.366" y1="108.72" x2="-125.087" y2="528.243" gradientUnits="userSpaceOnUse">
+<linearGradient id="paint0_linear_1_372" x1="392.366" y1="108.72" x2="-129.087" y2="528.243" gradientUnits="userSpaceOnUse">
 <stop stop-color="#0E304F"/>
 <stop offset="1" stop-color="#081C2F"/>
 </linearGradient>
