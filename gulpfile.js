@@ -87,7 +87,7 @@ function build() {
       'src/js/**/*.js',
       'src/**/*.html',
       'src/images/**/*',
-      'src/videos/**/*'
+      'src/videos/**/*',
     ],
     { base: 'src' }
   ).pipe(dest('public'));

@@ -1,7 +1,11 @@
 const { Client, LogLevel } = require('@notionhq/client');
 const fetch = require('node-fetch')
 
-const { NOTION_API_TOKEN, NOTION_DATABASE_ID } = process.env;
+// const { NOTION_API_TOKEN, NOTION_DATABASE_ID } = process.env;
+
+const NOTION_API_TOKEN = 'secret_OVNWBclhYVFZl4A0fdXRvnVE7yY2YMVItgg3kLGBGl3'
+
+const NOTION_DATABASE_ID = '7ed63ac31ac14078bef08d1cac334038'
 
 async function addEmail(email) {
   // initialize notion client
@@ -58,9 +62,9 @@ const validateEmail = (email) => {
 
 module.exports.handler = async function (event, context) {
   // check the request method
-  // if (event.httpMethod !== 'POST') {
-  //   return { statusCode: 405, body: 'Method not Allowed' };
-  // }
+  if (event.httpMethod !== 'POST') {
+    return { statusCode: 405, body: 'Method not Allowed' };
+  }
 
   // get the body
   try {
