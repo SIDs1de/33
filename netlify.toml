@@ -1,6 +1,5 @@
 [build]
 functions = "functions"
-publish = "src"
 
 [[plugins]]
   package = "@netlify/plugin-emails"

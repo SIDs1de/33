@@ -215,7 +215,7 @@ body {
   }
   &__form {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
   }
   &__input-wrapper {
     position: relative;
@@ -301,8 +301,16 @@ body {
   }
   &__social-img {
   }
+  &__form-main {
+    display: flex;
+    flex-direction: column;
+  }
 }
-
+.subscribe__checking {
+  padding-left: 10px;
+  margin-top: 10px;
+  display: block;
+}
 .footer-title {
   font-style: italic;
   font-weight: 800;

@@ -196,10 +196,14 @@
             Sign up for the email newsletters so you don't miss anything
           </div>
           <form class="footer__form" action="#">
-            <div class="footer__input-wrapper">
-              <input class="footer__input" type="email" placeholder="e-mail">
+            <div class="footer__form-main">
+              <div class="footer__input-wrapper">
+                <input class="footer__input" type="email" placeholder="e-mail">
+              </div>
+              <span class="subscribe__checking"></span>
             </div>
-            <span class="subscribe__checking"></span>
+            
+           
             <div class="footer__btn-wrapper">
               <button class="footer__btn" type="submit">
                 sign up
@@ -285,14 +289,13 @@
           };
 
           const response = await fetch('/.netlify/functions/index', options);
-          console.log(response);
         }
 
         registerUser()
 
         text.innerHTML = 'Success! You’re on the waitlist!';
         text.style.color = "#C6FF23";
-        emailInput.style.border = "border: 1px solid #0B304B"
+        emailInput.style.borderBottom = "2px solid #0B304B"
         emailInput.value = '';
       } else {
         form.classList.remove('valid');
@@ -305,14 +308,14 @@
           if (validateEmail(emailInput.value)) {
             form.classList.add('valid');
             form.classList.remove('invalid');
-            emailInput.style.border = "1px solid #C6FF23"
+            emailInput.style.borderBottom = "2px solid #C6FF23"
             text.innerHTML = '';
             text.style.color = "#C6FF23";
             button.classList.remove('disabled')
           } else {
             form.classList.remove('valid');
             form.classList.add('invalid');
-            emailInput.style.border = "1px solid #FF5977"
+            emailInput.style.borderBottom = "2px solid #FF5977"
             text.innerHTML = 'Check your email address';
             text.style.color = "#FF5977";
             button.classList.add('disabled')
