@@ -131,7 +131,7 @@
     <div class="container video__container">
       <div class="video__inner">
         <div class="video__video-wrapper">
-          <video class="video__video" src="videos/video/main.mp4" autoplay muted loop></video>
+          <video class="video__video" src="" autoplay muted loop></video>
         </div>
         <div class="video__arrow">
           <img class="video__arrow-img" src="images/video/arrow.svg" alt="Scroll on">
@@ -211,8 +211,8 @@
               </div>
               <span class="subscribe__checking"></span>
             </div>
-            
-           
+
+
             <div class="footer__btn-wrapper">
               <button class="footer__btn" type="submit">
                 sign up
@@ -265,6 +265,11 @@
 
   <div class="light"></div>
 
+  <!-- <iframe width="455" height="809" src="https://www.youtube.com/embed/OQkChc0CWHA" title="Ritmi - Launch Trailer 2023"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen></iframe> -->
+
   <script>
     const form = document.querySelector('.footer__form');
     const emailInput = document.querySelector('.footer__input');
@@ -304,7 +309,6 @@
 
         text.innerHTML = 'Success! You’re on the waitlist!';
         text.style.color = "#C6FF23";
-        emailInput.style.borderBottom = "2px solid #0B304B"
         emailInput.value = '';
       } else {
         form.classList.remove('valid');
@@ -317,14 +321,12 @@
           if (validateEmail(emailInput.value)) {
             form.classList.add('valid');
             form.classList.remove('invalid');
-            emailInput.style.borderBottom = "2px solid #C6FF23"
             text.innerHTML = '';
             text.style.color = "#C6FF23";
             button.classList.remove('disabled')
           } else {
             form.classList.remove('valid');
             form.classList.add('invalid');
-            emailInput.style.borderBottom = "2px solid #FF5977"
             text.innerHTML = 'Check your email address';
             text.style.color = "#FF5977";
             button.classList.add('disabled')

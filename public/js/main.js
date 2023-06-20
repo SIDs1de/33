@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const headerHeight = +window.getComputedStyle(header).height.slice(0, -2)
 
-    const value = window.innerHeight - headerHeight
+    const value = window.innerWidth * 9/16 
     if (window.innerWidth !== oldWidth) {
       videoBlock.style.height = `${value}px`
       videoBlock.style.marginTop = `${headerHeight}px`
@@ -61,8 +61,19 @@ document.addEventListener('DOMContentLoaded', () => {
     })
   }
 
+  const loadVideo = () => {
+    const video = document.querySelector('.video__video');
+
+    if (window.innerWidth >= window.innerHeight) {
+      video.src = 'videos/video/main-h.mp4'
+    } else {
+      video.src = 'videos/video/main-v.mp4'
+    }
+  }
+
   const main = () => {
     loadPage();
+    loadVideo();
     videoHeightCalculate();
     checkBtn();
     logoOnClick();
