@@ -1,4 +1,18 @@
 document.addEventListener('DOMContentLoaded', () => {
+  const loadPage = () => {
+    const html = document.querySelector('html');
+
+    html.classList.add('_loaded')
+    window.addEventListener('load', () => {
+      const body = document.querySelector('body');
+
+
+      body.classList.remove('_locked')
+      html.classList.remove('_locked')
+    })
+  }
+
+
   let oldWidth = 0;
 
   const videoHeightCalculate = () => {
@@ -39,9 +53,19 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  const logoOnClick = () => {
+    const logo = document.querySelector('.header__logo');
+
+    logo.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    })
+  }
+
   const main = () => {
+    loadPage();
     videoHeightCalculate();
     checkBtn();
+    logoOnClick();
 
     window.addEventListener('resize', videoHeightCalculate)
   }

@@ -21,6 +21,15 @@ $maxWidthContainer: 1200; // Для масштабирования, наприм
 html {
   overflow-x: hidden;
   max-width: 100%;
+  opacity: 0;
+  background: #021121;
+  &._loaded {
+    opacity: 1;
+    background: transparent;
+  }
+  &._locked {
+    overflow: hidden;
+  }
 }
 
 body {
@@ -32,6 +41,75 @@ body {
   overflow-x: hidden;
   max-width: 100%;
   position: relative;
+
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    opacity: 0;
+    transition: 0.2s;
+    z-index: 100;
+    pointer-events: none;
+    user-select: none;
+  }
+
+  .loader {
+    position: absolute;
+    opacity: 0;
+    transition: 0.2s;
+    z-index: 101;
+    pointer-events: none;
+    user-select: none;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .loader__main,
+  .loader__circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .loader__circle-img {
+    animation: rotating 5s infinite linear;
+  }
+
+  &::before {
+    width: 100%;
+    height: 100%;
+    background: #021121;
+    top: 0;
+    left: 0;
+  }
+
+  &._locked {
+    overflow: hidden;
+    &::before,
+    &::after {
+      opacity: 1;
+      pointer-events: initial;
+      user-select: initial;
+    }
+
+    .loader {
+      opacity: 1;
+      pointer-events: initial;
+      user-select: initial;
+    }
+  }
+}
+
+@keyframes rotating {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
 }
 
 .light {
@@ -69,6 +147,7 @@ body {
     @include adaptive-value("padding-bottom", 31, 9, 1);
   }
   &__logo {
+    cursor: pointer;
   }
   &__logo-img {
   }

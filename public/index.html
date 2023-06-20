@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="_locked">
 
 <head>
   <meta charset="UTF-8">
@@ -56,14 +56,23 @@
   <link href="css/main.min.css" rel="stylesheet">
 </head>
 
-<body>
+<body class="_locked">
+
+  <div class="loader">
+    <div class="loader__main">
+      <img class="loader__main-img" src="images/loader.svg" alt="Loading">
+    </div>
+    <div class="loader__circle">
+      <img class="loader__circle-img" src="images/round-loader.svg" alt="Loading">
+    </div>
+  </div>
 
   <header class="header">
     <div class="container header__container">
       <div class="header__inner">
-        <a class="header__logo" href="/">
+        <div class="header__logo">
           <img class="header__logo-img" src="images/header/logo.svg" alt="website logo">
-        </a>
+        </div>
         <div class="header__inner-main">
           <ul class="header__downloads">
             <li class="header__download">
