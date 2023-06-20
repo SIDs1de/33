@@ -231,7 +231,6 @@ body {
     height: 100%;
     position: relative;
     overflow: hidden;
-    background: #021121;
   }
   &__video {
     display: block;
@@ -239,8 +238,8 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-    // transform: translate(-50%, 0);
+    max-height: 100%;
+    // transform: translate(0, -50%);
   }
   &__arrow {
     position: absolute;
@@ -406,7 +405,6 @@ body {
   padding-top: 55px;
   margin-bottom: 250px;
   position: relative;
-  overflow: visible;
   z-index: 2;
   &::before,
   &::after {
@@ -414,6 +412,7 @@ body {
     position: absolute;
     pointer-events: none;
     user-select: none;
+    z-index: -2;
   }
   &::before {
     width: 1833px;

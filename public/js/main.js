@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     html.classList.add('_loaded')
     window.addEventListener('load', () => {
+      videoHeightCalculate();
       const body = document.querySelector('body');
 
 
@@ -20,8 +21,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const header = document.querySelector('.header');
 
     const headerHeight = +window.getComputedStyle(header).height.slice(0, -2)
+    console.log(headerHeight);
 
-    const value = window.innerWidth * 9/16 
+    const value = window.innerHeight - headerHeight
     if (window.innerWidth !== oldWidth) {
       videoBlock.style.height = `${value}px`
       videoBlock.style.marginTop = `${headerHeight}px`
@@ -74,9 +76,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const main = () => {
     loadPage();
     loadVideo();
-    videoHeightCalculate();
     checkBtn();
     logoOnClick();
+
 
     window.addEventListener('resize', videoHeightCalculate)
   }
