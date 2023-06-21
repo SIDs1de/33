@@ -265,6 +265,15 @@
 }
 
 @media (max-width: 600px) {
+  .video__play {
+    width: 80px;
+    height: 80px;
+    top: 50%;
+    svg {
+      width: 80px;
+      height: 80px;
+    }
+  }
   .footer {
     &__inner {
       flex-direction: column;

@@ -75,11 +75,60 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  const openModals = () => {
+    const btns = document.querySelectorAll('[data-open-modal]');
+    const body = document.querySelector('body');
+    const html = document.querySelector('html');
+
+    btns.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        html.classList.add('_modal-open')
+        body.classList.add('_modal-open')
+        const value = btn.getAttribute('data-video');
+        const iframe = document.querySelector('.modal__card-video iframe');
+
+        if (!iframe.width) {
+          let height = 809
+          let width = 455
+
+          if (window.innerWidth <= 580) {
+            height = 539
+            width = 303
+          }
+
+          if (window.innerWidth <= 360) {
+            height = 490
+            width = 275, 45
+          }
+
+          iframe.width = width
+          iframe.height = height
+        }
+        iframe.src = value
+
+
+      })
+    })
+
+    const closeBtns = document.querySelectorAll('.modal__card-cross, .modal__content, .modal__card-success-btn');
+    closeBtns.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        if (e.target.classList[0] == 'modal__card-cross' || e.target.classList[0] == 'modal__content' || e.target.classList[0] == 'modal__card-cross-img' || e.target.classList[0] == 'modal__card-success-btn') {
+          html.classList.remove('_modal-open')
+          body.classList.remove('_modal-open')
+          const iframe = document.querySelector('.modal__card-video iframe');
+          iframe.src = ''
+        }
+      })
+    })
+  }
+
   const main = () => {
     loadPage();
     loadVideo();
     checkBtn();
     logoOnClick();
+    openModals();
 
 
     window.addEventListener('resize', videoHeightCalculate)
