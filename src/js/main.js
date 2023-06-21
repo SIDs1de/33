@@ -84,12 +84,26 @@ document.addEventListener('DOMContentLoaded', () => {
       btn.addEventListener('click', (e) => {
         html.classList.add('_modal-open')
         body.classList.add('_modal-open')
-        const value = btn.getAttribute('data-video');
+        // const value = btn.getAttribute('data-video');
         const iframe = document.querySelector('.modal__card-video iframe');
 
         if (!iframe.width) {
-          let height = 809
-          let width = 455
+          let height = 630 
+          let width = 1120
+
+          if (window.innerWidth <= 1200) {
+            height = 420
+            width = 746,67
+          }
+          if (window.innerWidth <= 800) {
+            height = 280
+            width = 497,78
+          }
+
+          if (window.innerWidth <= 600) {
+            height = 809
+            width = 455
+          }
 
           if (window.innerWidth <= 580) {
             height = 539
@@ -104,7 +118,13 @@ document.addEventListener('DOMContentLoaded', () => {
           iframe.width = width
           iframe.height = height
         }
-        iframe.src = value
+
+        if (window.innerWidth <= 680) {
+          iframe.src = 'https://www.youtube.com/embed/OQkChc0CWHA'
+        } else {
+          iframe.src = 'https://www.youtube.com/embed/qnROzO58-n8'
+        }
+
 
 
       })
