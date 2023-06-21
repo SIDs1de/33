@@ -1,4 +1,15 @@
 document.addEventListener('DOMContentLoaded', () => {
+
+  const loadHeaderImages = () => {
+    if (window.innerWidth > 680) {
+      const imgs = document.querySelectorAll('[data-header-src]');
+      imgs.forEach(img => {
+        img.src = img.getAttribute('data-header-src')
+      })
+    }
+  }
+
+  loadHeaderImages();
   const loadPage = () => {
     const html = document.querySelector('html');
 
@@ -44,18 +55,18 @@ document.addEventListener('DOMContentLoaded', () => {
       oldWidth = window.innerWidth
     }
 
-    const arrow = document.querySelector('.video__arrow');
-    arrow.style.opacity ='0'
-    setTimeout(() => {
-      const video = document.querySelector('.video__video');
-      const videoHeight = video.getBoundingClientRect().height
-      arrow.style.opacity = '1'
+    // const arrow = document.querySelector('.video__arrow');
+    // arrow.style.opacity ='0'
+    // setTimeout(() => {
+    //   const video = document.querySelector('.video__video');
+    //   const videoHeight = video.getBoundingClientRect().height
+    //   arrow.style.opacity = '1'
 
-      const videoBlockHeight = videoBlock.offsetHeight
-      if (videoHeight < videoBlockHeight) {
-        arrow.style.bottom = `${52 + (videoBlockHeight - videoHeight)}px`
-      }
-    }, 700)
+    //   const videoBlockHeight = videoBlock.offsetHeight
+    //   if (videoHeight < videoBlockHeight) {
+    //     arrow.style.bottom = `${52 + (videoBlockHeight - videoHeight)}px`
+    //   }
+    // }, 700)
 
 
 
