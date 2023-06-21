@@ -36,6 +36,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const styles = document.querySelector('#bgs-styles');
     styles.href = 'css/bgs.css'
+
+    const modalCard = document.querySelector('.modal__card');
+    const modal = document.querySelector('.modal');
+    modalCard.style.transition = '0.3s'
+    modal.style.transition = '0.3s'
   }
 
 

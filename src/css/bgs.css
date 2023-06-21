@@ -1,6 +1,6 @@
-.header {
+/* .header {
   background-image: url("../images/light-1.png");
-}
+} */
 
 .dancing::before {
 	background-image: url('../images/dancing/bg-word.svg');

@@ -129,6 +129,7 @@ body {
 }
 
 .header {
+  background-image: url("../images/light-1.png");
   background-position: top;
   background-size: cover;
   background-repeat: no-repeat;
@@ -554,7 +555,7 @@ body {
 }
 
 .modal {
-  transition: 0.3s;
+  // transition: 0.3s;
   opacity: 0;
   visibility: hidden;
   position: fixed;
@@ -602,7 +603,7 @@ body {
   max-width: 1120px;
   width: 100%;
   position: relative;
-  transition: 0.3s;
+  // transition: 0.3s;
   transform: translateY(100px);
 }
 .modal__card-cross {
