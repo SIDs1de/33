@@ -265,6 +265,12 @@
 }
 
 @media (max-width: 600px) {
+  .modal__card-inner--big {
+    padding: 15px 20px;
+  }
+  .modal__card-text {
+    font-size: 20px;
+  }
   .video__play {
     width: 80px;
     height: 80px;
@@ -473,6 +479,12 @@
 }
 
 @media (max-width: 360px) {
+  .modal__card-inner--big {
+    padding: 25px 15px;
+  }
+  .modal__card-text {
+    font-size: 18px;
+  }
   .header {
     &__main-btn {
       font-size: 11px;

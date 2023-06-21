@@ -166,6 +166,7 @@ body {
   }
   &__download-btn {
     display: block;
+    cursor: pointer;
   }
   &__download-btn-img {
     height: 58px;
@@ -598,6 +599,14 @@ body {
   padding: 9px;
   background-color: #d9d9d9;
   border-radius: 60px;
+}
+
+.modal__card-inner--big {
+  padding: 20px 30px;
+}
+
+.modal__card-text {
+  font-size: 30px;
 }
 
 .modal__card-video iframe {

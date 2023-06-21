@@ -81,7 +81,7 @@
               </a>
             </li>
             <li class="header__download">
-              <a class="header__download-btn" href="#">
+              <a class="header__download-btn" data-open-modal="modal-video" data-open-modal-ios="true">
                 <img class="header__download-btn-img" src="images/header/app-store.svg" alt="Download on the App Store">
               </a>
             </li>
@@ -284,14 +284,23 @@
       <div class="modal__card">
         <div class="modal__card-inner">
           <div class="modal__card-cross">
-            <img class="modal__card-cross-img" src="images/modal/cross.svg" alt="Закрыть модальное окно"
-              title="закрыть модальное окно">
+            <img class="modal__card-cross-img" src="images/modal/cross.svg" alt="close modal window"
+              title="close modal window">
           </div>
           <div class="modal__card-video">
             <iframe width="" height="" src="" title="Ritmi - Launch Trailer 2023" frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowfullscreen></iframe>
           </div>
+        </div>
+        <div class="modal__card-inner modal__card-inner--big">
+          <div class="modal__card-cross">
+            <img class="modal__card-cross-img" src="images/modal/cross.svg" alt="close modal window"
+              title="close modal window">
+          </div>
+          <p class="modal__card-text">
+            Apple version is almost here
+          </p>
         </div>
       </div>
     </div>

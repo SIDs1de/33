@@ -20,16 +20,22 @@ document.addEventListener('DOMContentLoaded', () => {
     const videoBlock = document.querySelector('.video');
     const header = document.querySelector('.header');
 
-    // const playBtn = document.querySelector('.video__play');
 
     const headerHeight = +window.getComputedStyle(header).height.slice(0, -2)
-    // playBtn.style.top = `calc(50% - ${headerHeight}px)`
 
     const value = window.innerHeight - headerHeight
     if (window.innerWidth !== oldWidth) {
       videoBlock.style.height = `${value}px`
       videoBlock.style.marginTop = `${headerHeight}px`
       oldWidth = window.innerWidth
+    }
+
+    const video = document.querySelector('.video__video');
+    const videoHeight = video.clientHeight
+
+    const videoBlockHeight = videoBlock.offsetHeight
+    if (videoHeight < videoBlockHeight) {
+      videoBlock.style.height = `${videoHeight}px`
     }
   }
 
@@ -51,7 +57,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const isIOS = iOS()
     if (isIOS) {
-      btn.href = 'Ссылка на app store'
+      // btn.href = 'Ссылка на app store'
+      btn.href = ''
+      btn.setAttribute('data-open-modal', 'modal-video')
+      btn.setAttribute('data-open-modal-ios', 'true')
     } else {
       btn.href = 'Ссылка на google play'
     }
@@ -84,49 +93,59 @@ document.addEventListener('DOMContentLoaded', () => {
       btn.addEventListener('click', (e) => {
         html.classList.add('_modal-open')
         body.classList.add('_modal-open')
-        // const value = btn.getAttribute('data-video');
-        const iframe = document.querySelector('.modal__card-video iframe');
 
-        if (!iframe.width) {
-          let height = 630 
-          let width = 1120
+        const inners = document.querySelectorAll('.modal__card-inner');
 
-          if (window.innerWidth <= 1200) {
-            height = 420
-            width = 746,67
+        inners.forEach(inner => {
+          inner.style.display = 'block'
+        })
+
+        if (!btn.getAttribute('data-open-modal-ios')) {
+          const badInner = document.querySelectorAll('.modal__card-inner')[1];
+          badInner.style.display = 'none'
+          const iframe = document.querySelector('.modal__card-video iframe');
+
+          if (!iframe.width) {
+            let height = 630
+            let width = 1120
+
+            if (window.innerWidth <= 1200) {
+              height = 420
+              width = 746, 67
+            }
+            if (window.innerWidth <= 800) {
+              height = 280
+              width = 497, 78
+            }
+
+            if (window.innerWidth <= 600) {
+              height = 809
+              width = 455
+            }
+
+            if (window.innerWidth <= 580) {
+              height = 539
+              width = 303
+            }
+
+            if (window.innerWidth <= 360) {
+              height = 490
+              width = 275, 45
+            }
+
+            iframe.width = width
+            iframe.height = height
           }
-          if (window.innerWidth <= 800) {
-            height = 280
-            width = 497,78
+
+          if (window.innerWidth <= 680) {
+            iframe.src = 'https://www.youtube.com/embed/OQkChc0CWHA'
+          } else {
+            iframe.src = 'https://www.youtube.com/embed/qnROzO58-n8'
           }
-
-          if (window.innerWidth <= 600) {
-            height = 809
-            width = 455
-          }
-
-          if (window.innerWidth <= 580) {
-            height = 539
-            width = 303
-          }
-
-          if (window.innerWidth <= 360) {
-            height = 490
-            width = 275, 45
-          }
-
-          iframe.width = width
-          iframe.height = height
-        }
-
-        if (window.innerWidth <= 680) {
-          iframe.src = 'https://www.youtube.com/embed/OQkChc0CWHA'
         } else {
-          iframe.src = 'https://www.youtube.com/embed/qnROzO58-n8'
+          const badInner = document.querySelectorAll('.modal__card-inner')[0];
+          badInner.style.display = 'none'
         }
-
-
-
       })
     })
 
