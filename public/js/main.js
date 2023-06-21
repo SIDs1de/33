@@ -30,15 +30,15 @@ document.addEventListener('DOMContentLoaded', () => {
       oldWidth = window.innerWidth
     }
 
-    setTimeout(() => {
-      const video = document.querySelector('.video__video');
-      const videoHeight = video.getBoundingClientRect().height
+    // setTimeout(() => {
+    //   const video = document.querySelector('.video__video');
+    //   const videoHeight = video.getBoundingClientRect().height
 
-      const videoBlockHeight = videoBlock.offsetHeight
-      if (videoHeight < videoBlockHeight) {
-        videoBlock.style.height = `${videoHeight}px`
-      }
-    }, 500)
+    //   const videoBlockHeight = videoBlock.offsetHeight
+    //   if (videoHeight < videoBlockHeight) {
+    //     videoBlock.style.height = `${videoHeight}px`
+    //   }
+    // }, 500)
 
 
 
