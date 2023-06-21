@@ -58,9 +58,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const isIOS = iOS()
     if (isIOS) {
       // btn.href = 'Ссылка на app store'
-      btn.href = ''
+      console.log(123);
+      btn.removeAttribute('src')
       btn.setAttribute('data-open-modal', 'modal-video')
       btn.setAttribute('data-open-modal-ios', 'true')
+
+      // const body = document.querySelector('body');
+      // body.style.display = 'none'
     } else {
       btn.href = 'Ссылка на google play'
     }
