@@ -30,13 +30,13 @@ document.addEventListener('DOMContentLoaded', () => {
       oldWidth = window.innerWidth
     }
 
-    const video = document.querySelector('.video__video');
-    const videoHeight = video.clientHeight
+    // const video = document.querySelector('.video__video');
+    // const videoHeight = video.clientHeight
 
-    const videoBlockHeight = videoBlock.offsetHeight
-    if (videoHeight < videoBlockHeight) {
-      videoBlock.style.height = `${videoHeight}px`
-    }
+    // const videoBlockHeight = videoBlock.offsetHeight
+    // if (videoHeight < videoBlockHeight) {
+    //   videoBlock.style.height = `${videoHeight}px`
+    // }
   }
 
   const checkBtn = () => {
