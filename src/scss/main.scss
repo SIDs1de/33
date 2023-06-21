@@ -129,7 +129,9 @@ body {
 }
 
 .header {
-  background: url("../images/light-1.png") top/cover no-repeat, rgba(#021121, 0.6);
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
   position: fixed;
   z-index: 15;
   top: 0;
@@ -251,6 +253,7 @@ body {
     left: 50%;
     transform: translate(-50%, 0);
     animation: arrow-jumping 2s infinite;
+    transition: 0.15s;
   }
   &__arrow-img {
   }
@@ -330,7 +333,9 @@ body {
       left: 0;
       right: 0;
       bottom: 0;
-      background: url("../images/footer/input-bg.svg") center/contain no-repeat;
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
     }
   }
   &__input {
@@ -367,7 +372,9 @@ body {
       right: 0;
       bottom: 0;
       transition: 0.15s;
-      background: url("../images/footer/btn-bg.svg") center/contain no-repeat;
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
     }
   }
   &__btn {
@@ -445,7 +452,9 @@ body {
     top: 20px;
     left: 50%;
     transform: translateX(-50%);
-    background: url("../images/dancing/bg-word.svg") center/contain no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
   }
   &::after {
     width: 1613px;
@@ -453,7 +462,9 @@ body {
     height: 906px;
     top: 111px;
     right: 0;
-    background: url("../images/dancing/bg-hand.png") center/contain no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
   }
   &__container {
     max-width: 1000px;
@@ -486,7 +497,9 @@ body {
       right: 0;
       bottom: 0;
       filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.5));
-      background: url("../images/dancing/main-block-bg.svg") center/contain no-repeat;
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
     }
   }
   &__list {

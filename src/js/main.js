@@ -11,7 +11,20 @@ document.addEventListener('DOMContentLoaded', () => {
       html.classList.remove('_locked')
       loadVideo();
       videoHeightCalculate();
+
+      loadImages();
     })
+  }
+
+  const loadImages = () => {
+    const imgs = document.querySelectorAll('[data-src]');
+
+    imgs.forEach(img => {
+      img.src = img.getAttribute('data-src')
+    })
+
+    const styles = document.querySelector('#bgs-styles');
+    styles.href = 'css/bgs.css'
   }
 
 
@@ -31,15 +44,18 @@ document.addEventListener('DOMContentLoaded', () => {
       oldWidth = window.innerWidth
     }
 
-    // setTimeout(() => {
-    //   const video = document.querySelector('.video__video');
-    //   const videoHeight = video.getBoundingClientRect().height
+    const arrow = document.querySelector('.video__arrow');
+    arrow.style.opacity ='0'
+    setTimeout(() => {
+      const video = document.querySelector('.video__video');
+      const videoHeight = video.getBoundingClientRect().height
+      arrow.style.opacity = '1'
 
-    //   const videoBlockHeight = videoBlock.offsetHeight
-    //   if (videoHeight < videoBlockHeight) {
-    //     videoBlock.style.height = `${videoHeight}px`
-    //   }
-    // }, 500)
+      const videoBlockHeight = videoBlock.offsetHeight
+      if (videoHeight < videoBlockHeight) {
+        arrow.style.bottom = `${52 + (videoBlockHeight - videoHeight)}px`
+      }
+    }, 700)
 
 
 
