@@ -30,13 +30,20 @@ document.addEventListener('DOMContentLoaded', () => {
       oldWidth = window.innerWidth
     }
 
-    // const video = document.querySelector('.video__video');
-    // const videoHeight = video.clientHeight
+    setTimeout(() => {
+      const video = document.querySelector('.video__video');
+      const videoHeight = video.getBoundingClientRect().height
 
-    // const videoBlockHeight = videoBlock.offsetHeight
-    // if (videoHeight < videoBlockHeight) {
-    //   videoBlock.style.height = `${videoHeight}px`
-    // }
+      console.log(videoHeight)
+
+      const videoBlockHeight = videoBlock.offsetHeight
+      if (videoHeight < videoBlockHeight) {
+        videoBlock.style.height = `${videoHeight}px`
+      }
+    }, 100)
+
+
+
   }
 
   const checkBtn = () => {
@@ -58,7 +65,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const isIOS = iOS()
     if (isIOS) {
       // btn.href = 'Ссылка на app store'
-      console.log(123);
       btn.removeAttribute('src')
       btn.setAttribute('data-open-modal', 'modal-video')
       btn.setAttribute('data-open-modal-ios', 'true')
