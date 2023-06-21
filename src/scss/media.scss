@@ -47,6 +47,19 @@
       }
     }
   }
+  .video {
+    &__play {
+      &:hover {
+        svg {
+          fill: #ff58e2;
+        }
+      }
+      &:active {
+        transition: 0s;
+        transform: translate(-50%, -50%) scale(0.95);
+      }
+    }
+  }
   .footer {
     &__social {
       transition: 0.2s;
@@ -376,7 +389,7 @@
     &::before {
       width: 678px;
       height: 1464px;
-      background: url('../images/dancing/bg-word-vertical.svg') center/cover no-repeat;
+      background: url("../images/dancing/bg-word-vertical.svg") center/cover no-repeat;
       top: -166px;
       left: 50%;
       transform: translateX(-60%);

@@ -20,8 +20,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const videoBlock = document.querySelector('.video');
     const header = document.querySelector('.header');
 
+    // const playBtn = document.querySelector('.video__play');
+
     const headerHeight = +window.getComputedStyle(header).height.slice(0, -2)
-    console.log(headerHeight);
+    // playBtn.style.top = `calc(50% - ${headerHeight}px)`
 
     const value = window.innerHeight - headerHeight
     if (window.innerWidth !== oldWidth) {
