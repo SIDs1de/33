@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const loadVideo = () => {
     const video = document.querySelector('.video__video');
 
-    
+
     if (window.innerWidth >= window.innerHeight) {
       video.src = 'videos/video/main-h.mp4'
     } else {
@@ -172,12 +172,22 @@ document.addEventListener('DOMContentLoaded', () => {
     })
   }
 
+  const mouseMoving = () => {
+    const video = document.querySelector('.video__video');
+    const body = document.querySelector('body');
+
+    body.addEventListener('touchstart', () => {
+      video.play()
+    })
+  }
+
   const main = () => {
     loadPage();
     loadVideo();
     checkBtn();
     logoOnClick();
     openModals();
+    mouseMoving();
 
 
     window.addEventListener('resize', videoHeightCalculate)
