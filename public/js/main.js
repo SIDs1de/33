@@ -4,12 +4,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     html.classList.add('_loaded')
     window.addEventListener('load', () => {
-      videoHeightCalculate();
       const body = document.querySelector('body');
 
 
       body.classList.remove('_locked')
       html.classList.remove('_locked')
+      loadVideo();
+      videoHeightCalculate();
     })
   }
 
@@ -70,7 +71,10 @@ document.addEventListener('DOMContentLoaded', () => {
       // const body = document.querySelector('body');
       // body.style.display = 'none'
     } else {
-      btn.href = 'Ссылка на google play'
+      // btn.href = 'Ссылка на google play'
+      btn.removeAttribute('src')
+      btn.setAttribute('data-open-modal', 'modal-video')
+      btn.setAttribute('data-open-modal-android', 'true')
     }
   }
 
@@ -107,12 +111,12 @@ document.addEventListener('DOMContentLoaded', () => {
         const inners = document.querySelectorAll('.modal__card-inner');
 
         inners.forEach(inner => {
-          inner.style.display = 'block'
+          inner.style.display = 'none'
         })
 
-        if (!btn.getAttribute('data-open-modal-ios')) {
-          const badInner = document.querySelectorAll('.modal__card-inner')[1];
-          badInner.style.display = 'none'
+        if (!btn.getAttribute('data-open-modal-ios') && !btn.getAttribute('data-open-modal-android')) {
+          const currentInner = document.querySelectorAll('.modal__card-inner')[0];
+          currentInner.style.display = 'block'
           const iframe = document.querySelector('.modal__card-video iframe');
 
           if (!iframe.width) {
@@ -153,8 +157,14 @@ document.addEventListener('DOMContentLoaded', () => {
             iframe.src = 'https://www.youtube.com/embed/qnROzO58-n8'
           }
         } else {
-          const badInner = document.querySelectorAll('.modal__card-inner')[0];
-          badInner.style.display = 'none'
+          if (btn.getAttribute('data-open-modal-ios')) {
+            const currentInner = document.querySelectorAll('.modal__card-inner')[1];
+            currentInner.style.display = 'block'
+          }
+          if (btn.getAttribute('data-open-modal-android')) {
+            const currentInner = document.querySelectorAll('.modal__card-inner')[2];
+            currentInner.style.display = 'block'
+          }
         }
       })
     })
@@ -183,7 +193,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const main = () => {
     loadPage();
-    loadVideo();
     checkBtn();
     logoOnClick();
     openModals();
