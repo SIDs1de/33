@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
       video.src = 'videos/video/main-v.mp4'
     }
-    video.play();
+    // video.play();
   }
 
   const openModals = () => {
@@ -177,7 +177,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const body = document.querySelector('body');
 
     body.addEventListener('touchstart', () => {
-      video.play()
+      // video.play()
     })
   }
 
