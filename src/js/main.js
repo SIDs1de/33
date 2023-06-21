@@ -34,13 +34,11 @@ document.addEventListener('DOMContentLoaded', () => {
       const video = document.querySelector('.video__video');
       const videoHeight = video.getBoundingClientRect().height
 
-      console.log(videoHeight)
-
       const videoBlockHeight = videoBlock.offsetHeight
       if (videoHeight < videoBlockHeight) {
         videoBlock.style.height = `${videoHeight}px`
       }
-    }, 100)
+    }, 500)
 
 
 
@@ -87,11 +85,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const loadVideo = () => {
     const video = document.querySelector('.video__video');
 
+    
     if (window.innerWidth >= window.innerHeight) {
       video.src = 'videos/video/main-h.mp4'
     } else {
       video.src = 'videos/video/main-v.mp4'
     }
+    video.play();
   }
 
   const openModals = () => {
