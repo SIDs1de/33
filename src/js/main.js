@@ -126,6 +126,7 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
       video.src = 'videos/video/main-v.mp4'
     }
+    // video.play();
   }
 
   const openModals = () => {
