@@ -214,10 +214,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const main = () => {
     loadPage();
+    loadVideo();
     checkBtn();
     logoOnClick();
     openModals();
-    loadVideo();
 
 
     window.addEventListener('resize', videoHeightCalculate)

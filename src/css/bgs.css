@@ -14,10 +14,10 @@
 	background-image: url('../images/dancing/main-block-bg.svg');
 }
 
-.footer__input-wrapper {
+.footer__input-wrapper::before {
 	background-image: url('../images/footer/input-bg.svg');
 }
 
-.footer__btn-wrapper {
+.footer__btn-wrapper::before {
 	background-image: url('../images/footer/btn-bg.svg');
 }
