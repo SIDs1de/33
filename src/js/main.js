@@ -20,7 +20,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
       body.classList.remove('_locked')
       html.classList.remove('_locked')
-      loadVideo();
       videoHeightCalculate();
 
       loadImages();
@@ -225,6 +224,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const main = () => {
     loadPage();
+    loadVideo();
     checkBtn();
     logoOnClick();
     openModals();
