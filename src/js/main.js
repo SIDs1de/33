@@ -122,16 +122,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     if (window.innerWidth >= window.innerHeight) {
-      video.querySelectorAll('source')[0].src = 'videos/video/main-h.webm'
-      video.querySelectorAll('source')[1].src = 'videos/video/main-h.mp4'
-      // video.src = 'videos/video/main-h.mp4'
+      // video.querySelectorAll('source')[0].src = 'videos/video/main-h.webm'
+      // video.querySelectorAll('source')[1].src = 'videos/video/main-h.mp4'
+      video.src = 'videos/video/main-h.mp4'
     } else {
-      // video.src = 'videos/video/main-v.mp4'
-      video.querySelectorAll('source')[0].src = 'videos/video/main-v.webm'
-      video.querySelectorAll('source')[1].src = 'videos/video/main-v.mp4'
+      video.src = 'videos/video/main-v.mp4'
+      // video.querySelectorAll('source')[0].src = 'videos/video/main-v.webm'
+      // video.querySelectorAll('source')[1].src = 'videos/video/main-v.mp4'
     }
 
-    video.load()
+    // video.load()
     // video.play();
   }
 
